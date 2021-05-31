@@ -7,9 +7,9 @@ const calculateWinner= (squares)=>{
         [3,4,5],
         [6,7,8],
 
-        [0,4,6],
-        [1,5,7],
-        [2,6,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
 
         [0,4,8],
         [2,4,6]
@@ -35,6 +35,12 @@ class Board extends Component{
         count: 0,
     }
 
+    handleReset =()=>{
+        this.setState({squares:['', '', '', '', '', '', '', '', ''],
+        count: 0,
+    });
+    }
+
     handleClick=number  =>() =>{
        
         const newSquares = [ ...this.state.squares];
@@ -51,6 +57,8 @@ class Board extends Component{
             count: this.state.count+1,
         })
     }
+
+    
 
     render(){
         const { squares, xIsNext, count } = this.state;
@@ -88,7 +96,7 @@ class Board extends Component{
                     <Square value={squares[8]} onClick={this.handleClick(8)}  />
                 </div>
 
-                
+                <div className='button'><button className='reset' onClick={this.handleReset}>Reset</button></div>
              
             </div>
         );

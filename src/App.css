@@ -45,3 +45,22 @@
     font-size: 1.3rem;
     color:gray;
 }
+ .reset{
+    width: 9.5rem;
+    height: 3.3rem;
+    font-size: 1.5rem;
+    background-color: beige;
+    border-radius: .6rem;
+    border-color:lightblue;
+    color:rgb(92, 91, 91);
+    font-family: 'Domine', serif;
+} 
+.reset:hover{
+    background-color: rgb(214, 243, 255);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+} 
